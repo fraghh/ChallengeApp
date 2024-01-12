@@ -1,20 +1,26 @@
-﻿var name = "ewa";
-var sex = "M";
-var age = 17;
+﻿
+Console.WriteLine("podaj liczbe: ");
+string number = Console.ReadLine();
 
-if (sex == "F" && age < 30)
-{
-    Console.WriteLine("kobieta lat 30");
+char[] letters = number.ToArray();
+int liczba = 0;
+
+
+for(int i = 0; i<10;i++)
+    {
+    int licznik = 0;
+    foreach (char charr in  letters)
+        {
+            liczba = int.Parse(charr.ToString());
+            if (i == liczba)
+            {
+            licznik=licznik+1;
+            }
+        
+        }
+    Console.WriteLine(i + " => " + licznik);
 }
-else if (name == "ewa" && age == 30)
-{
-    Console.WriteLine("Ewa lat 30.");
-}
-else if(sex=="M" &&  age < 18)
-{
-    Console.WriteLine("niepelnoletni mezczyzna");
-}
-else 
-{
-    Console.WriteLine("nic");
-}
+
+
+
+
