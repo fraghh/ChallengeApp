@@ -21,7 +21,7 @@ public class Employee
     }
 
 
-
+    //
 
     public void AddPoints(int punkty) 
     {
