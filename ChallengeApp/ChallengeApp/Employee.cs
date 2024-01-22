@@ -17,7 +17,7 @@ public class Employee
         this.Imie = imie;
         this.Nazwisko = nazwisko;
         this.Wiek = wiek;
-        int Wynik = 0;
+        
     }
 
 
@@ -28,6 +28,9 @@ public class Employee
         this.Wynik += punkty;
     }
     
-
+    public void RemovePoints(int punkty) 
+    {  
+        this.Wynik -= punkty;
+    }
 }
 
