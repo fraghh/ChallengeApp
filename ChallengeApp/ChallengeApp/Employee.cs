@@ -5,8 +5,7 @@ namespace ChallengeApp;
 
 public class Employee
 {
-    //public int wynik;
-    //public int maxResult;
+  
     
     public string Imie { get; private set; }
     public string Nazwisko { get; private set; }
@@ -28,16 +27,7 @@ public class Employee
     {
         this.Wynik += punkty;
     }
-    //public int Wynik()
-    //{
-      //  return this.wynik;
-   // }
     
-    public void wyswietlanie() 
-    {
-
-    }
-
 
 }
 

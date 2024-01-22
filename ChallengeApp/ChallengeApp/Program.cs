@@ -38,7 +38,7 @@ foreach(var user in users)
         userWithMaxResult=user;
     }
 }
-Console.WriteLine("Uzytkownik " + userWithMaxResult.Nazwisko +" "+ userWithMaxResult.Imie + " posiada najwieksza liczbe punktow, a jego wynik to: " + userWithMaxResult.Wynik+" punktow.");
+Console.WriteLine("Uzytkownik " + userWithMaxResult.Nazwisko +" "+ userWithMaxResult.Imie +" lat:"+userWithMaxResult.Wiek +" posiada najwieksza liczbe punktow, a jego wynik to: " + userWithMaxResult.Wynik+" punktow.");
 
 
 
