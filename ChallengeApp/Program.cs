@@ -1,23 +1,14 @@
-﻿var digit = new int[10];
+﻿User user1 = new User();
+User user1 = new User();
+User user1 = new User();
 
-Console.Write("podaj liczbe: ");
-string number = Console.ReadLine();
+user1.login = "adam";
+user1.password = "password";    
 
-foreach (char a in number)
+
+class User
 {
-    int cyfra = (int)char.GetNumericValue(a);
-
-    for (int i = 0; i < digit.Length; i++)
-    {
-        if (i == cyfra)
-        {
-            digit[i]++;
-        }
-    }
-}
-Console.WriteLine("Liczba to " + number);
-for (int i = 0; i < (digit.Length); i++)
-{
-
-    Console.WriteLine("Cyfra " + i + " wystapila " + digit[i] + " razy.");
+    public string login;
+    public string password;
+    private string name;
 }
