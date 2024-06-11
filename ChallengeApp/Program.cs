@@ -1,14 +1,30 @@
 ﻿using ChallengeApp;
 
-User user1 = new User("adam","1");
-User user2 = new User("tom", "1");
-User user3 = new User("rom", "1");
+Employee user1 = new Employee("tom", "bom", 14);
+Employee user2 = new Employee("bob", "tob", 34);
+Employee user3 = new Employee("mob", "fob", 54);
 
 
-//user1.Login = "marek";
+
+
 user1.AddScore(5);
-user1.AddScore(5);
+user1.AddScore(3);
 user1.AddScore(2);
+user1.AddScore(1);
+user1.AddScore(2);
+
+user2.AddScore(5);
+user2.AddScore(2);
+user2.AddScore(5);
+user2.AddScore(2); 
+user2.AddScore(1);
+
+user3.AddScore(5);
+user3.AddScore(1);
+user3.AddScore(5);
+user3.AddScore(3);
+user3.AddScore(5);
+
 
 var result = user1.Result;
 
