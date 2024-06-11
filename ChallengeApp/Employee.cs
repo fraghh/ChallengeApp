@@ -8,10 +8,12 @@
         public string Nazwisko { get; private set; }
         public int Wiek { get; private set; }
 
-        public int Result { get
+        public int Result
+        {
+            get
             {
                 return this.score.Sum();
-            } 
+            }
         }
 
         public Employee(string imie, string nazwisko, int wiek)
@@ -19,7 +21,7 @@
             this.Imie = imie;
             this.Nazwisko = nazwisko;
             this.Wiek = wiek;
-            
+
         }
 
 
@@ -28,6 +30,6 @@
             this.score.Add(score);
         }
 
-        
+
     }
 }
