@@ -11,7 +11,10 @@ user1.AddGrade(3);
 var statistics = user1.GetStatistics();
 
 
-
+void Set(out Statistics statistics)
+{
+    statistics = new Statistics();
+}
 
 
 
