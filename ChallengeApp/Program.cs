@@ -1,27 +1,29 @@
 ﻿using ChallengeApp;
 
-User user1 = new User("tom", "bom");
-User user2 = new User("bob", "tob");
-User user3 = new User("mob", "fob");
+Employee2 user1 = new Employee2("tom", "bom");
+
+user1.AddGrade(5);
+user1.AddGrade(3);
+user1.AddGrade(3);
+
+user1.AddGrade(3);
+
+var statistics = user1.GetStatistics();
 
 
 
 
-user1.AddScore(5);
-user1.AddScore(3);
 
 
 
-user2.AddScore(6);
-user2.AddScore(2);
-
-
-user3.AddScore(5);
-user3.AddScore(1);
 
 
 
-var result1 = user1.Result;
-var result2 = user2.Result;
-var result3 = user3.Result;
+
+
+Console.WriteLine($"Average: {statistics.Average:N2}");
+Console.WriteLine($"maximum: {statistics.Max}");
+Console.WriteLine($"minimum: {statistics.Min}");
+
+
 
