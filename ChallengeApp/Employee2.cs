@@ -26,6 +26,9 @@ namespace ChallengeApp
 
             var statistics = new Statistics();
 
+
+            
+
             statistics.Average = 0;
             statistics.Min = float.MaxValue;
             statistics.Max = float.MinValue;

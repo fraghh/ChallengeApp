@@ -3,18 +3,16 @@
 Employee2 user1 = new Employee2("tom", "bom");
 
 user1.AddGrade(5);
-user1.AddGrade(3);
+user1.AddGrade(6);
 user1.AddGrade(3);
 
-user1.AddGrade(3);
+//user1.AddGrade(3);
 
 var statistics = user1.GetStatistics();
 
 
-void Set(out Statistics statistics)
-{
-    statistics = new Statistics();
-}
+
+
 
 
 
