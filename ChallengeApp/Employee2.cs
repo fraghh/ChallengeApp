@@ -90,6 +90,18 @@ namespace ChallengeApp
 
             } while(index< this.grades.Count);
 
+
+            while(index < this.grades.Count)
+            {
+
+
+                statistics.Max = Math.Max(statistics.Max, this.grades[index]);
+                statistics.Min = Math.Min(statistics.Min, this.grades[index]);
+                statistics.Average += this.grades[index];
+                index++;
+
+            }
+
             statistics.Average /= this.grades.Count;
 
             return statistics;
