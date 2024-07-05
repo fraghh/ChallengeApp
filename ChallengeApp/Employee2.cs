@@ -21,7 +21,7 @@ namespace ChallengeApp
         public void AddGrade(float grade)
         {
 
-            int valueInInt = Math.Ceiling((int)grade);
+            //int valueInInt = Math.Ceiling((int)grade);
 
 
             if (grade >= 0 && grade <= 100)
@@ -79,21 +79,12 @@ namespace ChallengeApp
 
             //}
             var index = 0;
-            do
-            {
-              
-
-                statistics.Max = Math.Max(statistics.Max, this.grades[index]);
-                statistics.Min = Math.Min(statistics.Min, this.grades[index]);
-                statistics.Average += this.grades[index];
-                index++;
-
-            } while(index< this.grades.Count);
-
-
             while(index < this.grades.Count)
             {
-
+                if (this.grades[index] == 5)
+                {
+                    break;
+                }
 
                 statistics.Max = Math.Max(statistics.Max, this.grades[index]);
                 statistics.Min = Math.Min(statistics.Min, this.grades[index]);
