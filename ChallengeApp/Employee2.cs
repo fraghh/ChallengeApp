@@ -71,27 +71,31 @@ namespace ChallengeApp
             statistics.Min = float.MaxValue;
             statistics.Max = float.MinValue;
 
-            //foreach (var grade in this.grades)
-            //{
-              //  statistics.Max = Math.Max(statistics.Max, grade);
-                //statistics.Min = Math.Min(statistics.Min, grade);
-                //statistics.Average += grade;
-
-            //}
-            var index = 0;
-            while(index < this.grades.Count)
+            foreach (var grade in this.grades)
             {
-                if (this.grades[index] == 5)
+                if (grade < 0)
                 {
-                    break;
+                    continue;
                 }
-
-                statistics.Max = Math.Max(statistics.Max, this.grades[index]);
-                statistics.Min = Math.Min(statistics.Min, this.grades[index]);
-                statistics.Average += this.grades[index];
-                index++;
+                statistics.Max = Math.Max(statistics.Max, grade);
+                statistics.Min = Math.Min(statistics.Min, grade);
+                statistics.Average += grade;
 
             }
+           // var index = 0;
+           // while(index < this.grades.Count)
+            //{
+              //  if (this.grades[index] == 5)
+                //{
+                  //  break;
+                //}
+
+          //      statistics.Max = Math.Max(statistics.Max, this.grades[index]);
+            //    statistics.Min = Math.Min(statistics.Min, this.grades[index]);
+              //  statistics.Average += this.grades[index];
+                //index++;
+
+           // }
 
             statistics.Average /= this.grades.Count;
 
