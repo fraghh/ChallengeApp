@@ -10,7 +10,7 @@ Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Console.WriteLine();
 
 
-var employee = new Employee2("michal", "kaminski");
+var employee = new Employee2("michal", "kaminski", 'M');
 
 while (true)
 {
