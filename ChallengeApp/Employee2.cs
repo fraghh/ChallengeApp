@@ -27,7 +27,8 @@ namespace ChallengeApp
             }
             else
             {
-                Console.WriteLine("Invalid grade value");
+                throw new Exception("invalid value");
+               // Console.WriteLine("Invalid grade value");
             }
         }
 
@@ -40,7 +41,8 @@ namespace ChallengeApp
 
             else
             {
-                Console.WriteLine("string is not floatable");
+                throw new Exception("string is not floatable");
+                //Console.WriteLine("string is not floatable");
             }
 
 
@@ -88,8 +90,9 @@ namespace ChallengeApp
                     this.grades.Add(20);
                     break;
                 default:
-                    Console.WriteLine("wrong letter");
-                    break;
+                    throw new Exception("wrong letter");
+                    //Console.WriteLine("wrong letter");
+                   
 
 
             }
