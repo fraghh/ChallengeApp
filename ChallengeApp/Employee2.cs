@@ -18,7 +18,7 @@ namespace ChallengeApp
         public void AddGrade(float grade)
         {
 
-            //int valueInInt = Math.Ceiling((int)grade);
+           
 
 
             if (grade >= 0 && grade <= 100)
@@ -40,7 +40,7 @@ namespace ChallengeApp
 
             else
             {
-                Console.WriteLine("string is not float");
+                Console.WriteLine("string is not floatable");
             }
 
 
@@ -58,7 +58,7 @@ namespace ChallengeApp
 
         public void AddGrade(double grade)
         {
-            float gradeAsFloat = grade;
+            var gradeAsFloat = (float)grade;
             this.AddGrade(gradeAsFloat);
         }
 
@@ -87,7 +87,9 @@ namespace ChallengeApp
                 case 'e':
                     this.grades.Add(20);
                     break;
-
+                default:
+                    Console.WriteLine("wrong letter");
+                    break;
 
 
             }
@@ -132,19 +134,19 @@ namespace ChallengeApp
 
                 switch(statistics.Average)
             {
-                case var average when average >= 90:
+                case var average when average >= 80:
                     statistics.AverageLetter = 'A';
                     break;
-                case var average when average >= 80:
+                case var average when average >= 60:
                     statistics.AverageLetter = 'B';
                     break;
-                case var average when average >= 60:
+                case var average when average >= 40:
                     statistics.AverageLetter = 'C';
                     break;
-                case var average when average >= 40:
+                case var average when average >= 20:
                     statistics.AverageLetter = 'D';
                     break;
-                case var average when average >= 20:
+                default:
                     statistics.AverageLetter = 'E';
                     break;
             }
