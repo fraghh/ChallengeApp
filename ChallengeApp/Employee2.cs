@@ -1,8 +1,5 @@
 ﻿
 
-
-using System.Diagnostics;
-
 namespace ChallengeApp
 {
     public class Employee2
@@ -30,7 +27,7 @@ namespace ChallengeApp
             }
             else
             {
-                Console.WriteLine("Invalid data");
+                Console.WriteLine("Invalid grade value");
             }
         }
 
@@ -45,55 +42,124 @@ namespace ChallengeApp
             {
                 Console.WriteLine("string is not float");
             }
-            
-            
+
+
         }
+        public void AddGrade(int grade)
+         {
+            float gradeAsFloat = grade;
+            this.AddGrade(gradeAsFloat);
+         }
+        public void AddGrade(long grade)
+        {
+            float gradeAsFloat = grade;
+            this.AddGrade(gradeAsFloat);
+        }
+
+        public void AddGrade(double grade)
+        {
+            float gradeAsFloat = grade;
+            this.AddGrade(gradeAsFloat);
+        }
+
+
+        public void AddGrade(char grade)
+        {
+            switch (grade)
+            {
+                case 'A':
+                case 'a':
+                    this.grades.Add(100);
+                    break;
+                case 'B':
+                case 'b':
+                    this.grades.Add(80);
+                    break;
+                case 'C':
+                case 'c':
+                    this.grades.Add(60);
+                    break;
+                case 'D':
+                case 'd':
+                    this.grades.Add(40);
+                    break;
+                case 'E':
+                case 'e':
+                    this.grades.Add(20);
+                    break;
+
+
+
+            }
+
+        }
+
 
         public void ShowGrades()
-        {
-            Console.Write("Lista: ");
-            foreach (var grade in this.grades)
             {
-                Console.Write($" {grade} ");
-            }
-            Console.WriteLine();
+                Console.Write("Lista: ");
+                foreach (var grade in this.grades)
+                {
+                    Console.Write($" {grade} ");
+                }
+                Console.WriteLine();
 
-        }
+            }
 
 
         public Statistics GetStatistics()
-        {
-
-            var statistics = new Statistics();
-
-
-
-
-            statistics.Average = 0;
-            statistics.Min = float.MaxValue;
-            statistics.Max = float.MinValue;
-
-            foreach (var grade in this.grades)
             {
-                statistics.Max = Math.Max(statistics.Max, grade);
-                statistics.Min = Math.Min(statistics.Min, grade);
-                statistics.Average += grade;
-            
+
+                var statistics = new Statistics();
+
+
+
+
+                statistics.Average = 0;
+                statistics.Min = float.MaxValue;
+                statistics.Max = float.MinValue;
+
+                foreach (var grade in this.grades)
+                {
+                    statistics.Max = Math.Max(statistics.Max, grade);
+                    statistics.Min = Math.Min(statistics.Min, grade);
+                    statistics.Average += grade;
+
+                }
+
+
+                statistics.Average /= this.grades.Count;
+
+                switch(statistics.Average)
+            {
+                case var average when average >= 90:
+                    statistics.AverageLetter = 'A';
+                    break;
+                case var average when average >= 80:
+                    statistics.AverageLetter = 'B';
+                    break;
+                case var average when average >= 60:
+                    statistics.AverageLetter = 'C';
+                    break;
+                case var average when average >= 40:
+                    statistics.AverageLetter = 'D';
+                    break;
+                case var average when average >= 20:
+                    statistics.AverageLetter = 'E';
+                    break;
             }
-           
 
-            statistics.Average /= this.grades.Count;
+                return statistics;
+            }
 
-            return statistics;
+
+
+
         }
 
 
 
-       
-    }
 
 
+    } 
 
-
-
-}
