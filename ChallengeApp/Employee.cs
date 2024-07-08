@@ -12,9 +12,9 @@ namespace ChallengeApp
 
         public Employee(string name, string surname)
 
-             {
+        {
             this.Name = name;
-            this.Surname= surname;
+            this.Surname = surname;
         }
 
         public void AddGrade(float grade)
@@ -136,10 +136,5 @@ namespace ChallengeApp
 
 
     }
-
-
-
-
-
 }
 

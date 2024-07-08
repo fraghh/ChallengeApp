@@ -14,7 +14,6 @@ while (true)
     {
         break;
     }
-
     try
     {
         employee.AddGrade(input);

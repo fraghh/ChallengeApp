@@ -1,7 +1,7 @@
 ﻿
 namespace ChallengeApp.test
 {
-    public class Employee2tests
+    public class EmployeeTests
     {
         [Test]
         public void WhenGetStatisticsCalled_shouldReturnCorrectMax()
@@ -43,8 +43,6 @@ namespace ChallengeApp.test
 
         }
 
-        
-
         [Test]
         public void WhenGetStatisticsCalled_shouldReturnCorrectAverage()
         {
@@ -72,7 +70,6 @@ namespace ChallengeApp.test
             employee.AddGrade("5");
             employee.AddGrade("5");
 
-
             //act
 
             var statistics = employee.GetStatistics();
@@ -89,7 +86,6 @@ namespace ChallengeApp.test
             var employee = new Employee2("michal", "kam");
             employee.AddGrade('A');
             employee.AddGrade('b');
-
 
             //act
 
@@ -108,8 +104,6 @@ namespace ChallengeApp.test
             var employee = new Employee2("michal", "kam");
             employee.AddGrade(100);
             employee.AddGrade(90);
-
-
             //act
 
             var statistics = employee.GetStatistics();
@@ -127,16 +121,10 @@ namespace ChallengeApp.test
             var employee = new Employee2("michal", "kam");
             employee.AddGrade(79);
             employee.AddGrade(80);
-
-
             //act
-
             var statistics = employee.GetStatistics();
-
             //assert
-
             Assert.AreEqual('B', statistics.AverageLetter);
-
         }
         [Test]
         public void whenAverageEqualsBelow70_shouldRecordCorrectAverageLetter()
@@ -145,16 +133,10 @@ namespace ChallengeApp.test
             var employee = new Employee2("michal", "kam");
             employee.AddGrade(59);
             employee.AddGrade(60);
-
-
             //act
-
             var statistics = employee.GetStatistics();
-
             //assert
-
             Assert.AreEqual('C', statistics.AverageLetter);
-
         }
     }
 }
