@@ -2,7 +2,7 @@
 
 namespace ChallengeApp
 {
-    public abstract class Person :System.Object
+    public abstract class Person : System.Object
     {
         public string Name { get; private set; }
         public string Surname { get; private set; }
@@ -16,6 +16,6 @@ namespace ChallengeApp
 
 
         }
-       
+
     }
 }
