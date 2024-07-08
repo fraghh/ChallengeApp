@@ -1,20 +1,17 @@
 ﻿
-
 namespace ChallengeApp
 {
-    public class Employee : IEmployee
+    public class Supervisor:IEmployee
     {
-
         private List<float> grades = new List<float>();
-
         public string Name { get; private set; }
         public string Surname { get; private set; }
 
-        public Employee(string name, string surname)
+        public Supervisor(string name, string surname)
 
-             {
+        {
             this.Name = name;
-            this.Surname= surname;
+            this.Surname = surname;
         }
 
         public void AddGrade(float grade)
@@ -31,16 +28,65 @@ namespace ChallengeApp
 
         public void AddGrade(string grade)
         {
-            if (float.TryParse(grade, out float result))
+            switch (grade)
             {
-                this.AddGrade(result);
+                case "6":
+                    this.grades.Add(100);
+                    break;
+                case "6-":
+                case "-6":
+                    this.grades.Add(95);
+                    break;
+                case "5+":
+                case "+5":
+                    this.grades.Add(85);
+                    break;
+                case "5":
+                    this.grades.Add(80);
+                    break;
+                case "-5":
+                case "5-":
+                    this.grades.Add(75);
+                    break;
+                case "4+":
+                case "+4":
+                    this.grades.Add(65);
+                    break;
+                case "4":
+                    this.grades.Add(60);
+                    break;
+                case "-4":
+                case "4-":
+                    this.grades.Add(55);
+                    break;
+                case "3+":
+                case "+3":
+                    this.grades.Add(85);
+                    break;
+                case "3":
+                    this.grades.Add(80);
+                    break;
+                case "-3":
+                case "3-":
+                    this.grades.Add(75);
+                    break;
+                case "2+":
+                case "+2":
+                    this.grades.Add(85);
+                    break;
+                case "2":
+                    this.grades.Add(80);
+                    break;
+                case "-2":
+                case "2-":
+                    this.grades.Add(75);
+                    break;
+                case "1":
+                    this.grades.Add(0);
+                    break;
+                default:
+                    throw new Exception("wrong school score");
             }
-
-            else
-            {
-                throw new Exception("string is not floatable");
-            }
-        }
         public void AddGrade(int grade)
         {
             float gradeAsFloat = grade;
@@ -135,11 +181,11 @@ namespace ChallengeApp
 
 
 
+
+
+
+
+
+
     }
-
-
-
-
-
-}
 
