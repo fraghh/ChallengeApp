@@ -7,7 +7,7 @@ namespace ChallengeApp.test
         public void WhenGetStatisticsCalled_shouldReturnCorrectMax()
         {
             //arrange
-            var employee = new Employee2("michal", "kam");
+            var employee = new Employee("michal", "kam", 'M');
             employee.AddGrade(5);
             employee.AddGrade(6);
             employee.AddGrade(3);
@@ -27,7 +27,7 @@ namespace ChallengeApp.test
         public void WhenGetStatisticsCalled_shouldReturnCorrectMin()
         {
             //arrange
-            var employee = new Employee2("michal", "kam");
+            var employee = new Employee("michal", "kam", 'M');
             employee.AddGrade(5);
             employee.AddGrade(6);
             employee.AddGrade(3);
@@ -47,7 +47,7 @@ namespace ChallengeApp.test
         public void WhenGetStatisticsCalled_shouldReturnCorrectAverage()
         {
             //arrange
-            var employee = new Employee2("michal", "kam");
+            var employee = new Employee("michal", "kam",'M');
             employee.AddGrade(5);
             employee.AddGrade(6);
             employee.AddGrade(3);
@@ -66,7 +66,7 @@ namespace ChallengeApp.test
         public void WhenAddGradeWithStringAdded_shouldRecordCorrectValueInFloat()
         {
             //arrange
-            var employee = new Employee2("michal", "kam");
+            var employee = new Employee("michal", "kam",'M');
             employee.AddGrade("5");
             employee.AddGrade("5");
 
@@ -83,7 +83,7 @@ namespace ChallengeApp.test
         public void whenGradeAsLetterIsAdded_shouldRecordCorrectAverage()
         {
             //arrange
-            var employee = new Employee2("michal", "kam");
+            var employee = new Employee("michal", "kam", 'M');
             employee.AddGrade('A');
             employee.AddGrade('b');
 
@@ -101,7 +101,7 @@ namespace ChallengeApp.test
         public void whenAverageEquals90_shouldRecordCorrectAverageLetter()
         {
             //arrange
-            var employee = new Employee2("michal", "kam");
+            var employee = new Employee("michal", "kam", 'M');
             employee.AddGrade(100);
             employee.AddGrade(90);
             //act
@@ -118,7 +118,7 @@ namespace ChallengeApp.test
         public void whenAverageEqualsBelow80_shouldRecordCorrectAverageLetter()
         {
             //arrange
-            var employee = new Employee2("michal", "kam");
+            var employee = new Employee("michal", "kam", 'M');
             employee.AddGrade(79);
             employee.AddGrade(80);
             //act
@@ -130,7 +130,7 @@ namespace ChallengeApp.test
         public void whenAverageEqualsBelow70_shouldRecordCorrectAverageLetter()
         {
             //arrange
-            var employee = new Employee2("michal", "kam");
+            var employee = new Employee("michal", "kam", 'M');
             employee.AddGrade(59);
             employee.AddGrade(60);
             //act

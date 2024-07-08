@@ -13,9 +13,6 @@ namespace ChallengeApp
             this.Name = name;
             this.Surname = surname;
             this.Sex = sex;
-
-
         }
-
     }
 }
